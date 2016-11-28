@@ -1,0 +1,112 @@
+body {
+	background-color: #4576c5;
+}
+
+input[type="radio"] {
+
+	display: none;
+}
+
+/*hide the content of each label and set height to 0 so transform works*/
+.menu-content {
+	overflow-y:hidden;
+	height:0;
+}
+
+.accordion {
+	width:50%;
+	font-size:2em;
+	color:#c545b6;
+	margin: 0 auto;
+}
+
+
+
+.accordion ul li {
+	list-style-type:none;
+	background-color: #45b6c5;
+	border-bottom: 2px solid #45c554;
+	padding: 5px;
+	border-radius:3px;
+	transition: transform 1s;
+}
+
+.accordion ul li:hover {
+	background-color: #6cc5d1;
+}
+
+.accordion label::before {
+	content:">";
+	font-size: .8em;
+	padding: 5px;
+	color:#b6c545;
+	margin:5px;
+}
+
+
+/*style for rotating arrow on checked radio button*/
+:checked + label[for="appetizers"]::before,
+:checked + label[for="entrees"]::before, 
+:checked + label[for="desserts"]::before,
+:checked + label[for="soups-salads"]::before {
+
+	display: inline-block; /* ::before and ::after content needs to be inline block for transformations to work*/
+	transition: transform 1s;
+	transform:rotate(90deg);
+}
+
+
+/*style the content of each section*/
+.menu-content {
+	color:white;
+}
+
+.menu-content p {
+	font-size: .5em;
+}
+
+.menu-content h4{
+	padding: 0;
+	margin:0;
+}
+
+.menu-content h5 {
+	padding: 0;
+	margin-top:10px;
+	margin-bottom: 0;
+	border-bottom: 2px solid #45b6c5;
+}
+
+
+/*transition changes*/
+.animation-change {
+	-webkit-transition: height 1s;
+  	transition: height 1s;
+}
+
+/*display content for checked label
+  set the proper height for the content	
+*/
+#appetizers:checked ~ label[for="appetizers"] + .menu-content {
+	height:200px;
+}
+#entrees:checked ~ label[for="entrees"] + .menu-content {
+	height:360px;
+}
+#desserts:checked ~ label[for="desserts"] + .menu-content {
+	height:170px;
+}
+#soups-salads:checked ~ label[for="soups-salads"] + .menu-content {
+	height:290px;
+}
+
+
+
+
+
+
+
+
+
+
+
