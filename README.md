@@ -3,3 +3,6 @@ This repo contains the responsive projects for Modern Developer Mastering Web De
 
 ##Accordion Responsive
 [live](https://jjs88.github.io/MD-mastering-css-projects-responsive/accordion-component)
+
+##Business Card Responsive
+[live](https://jjs88.github.io/MD-mastering-css-projects-responsive/business-card-component)
