@@ -15,9 +15,14 @@ input[type="radio"] {
 
 .accordion {
 	width:50%;
-	font-size:2em;
+	font-size:2rem;
 	color:#c545b6;
 	margin: 0 auto;
+}
+
+
+.accordion ul {
+	padding:0;
 }
 
 
@@ -102,6 +107,75 @@ input[type="radio"] {
 
 
 
+/*media queries*/
+
+@media screen and (min-width: 360px) {
+
+	.accordion {
+		width:100%;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	#appetizers:checked ~ label[for="appetizers"] + .menu-content {
+		height:145px;
+	}
+	#entrees:checked ~ label[for="entrees"] + .menu-content {
+		height:285px;
+	}
+	#desserts:checked ~ label[for="desserts"] + .menu-content {
+		height:120px;
+	}
+	#soups-salads:checked ~ label[for="soups-salads"] + .menu-content {
+		height:200px;
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+
+	.accordion {
+		font-size: 1.8rem;
+		width:60%;
+		text-align: center;
+	}
+
+	#appetizers:checked ~ label[for="appetizers"] + .menu-content {
+		height:170px;
+	}
+	#entrees:checked ~ label[for="entrees"] + .menu-content {
+		height:310px;
+	}
+	#desserts:checked ~ label[for="desserts"] + .menu-content {
+		height:145px;
+	}
+	#soups-salads:checked ~ label[for="soups-salads"] + .menu-content {
+		height:240px;
+	}
+}
+
+
+@media screen and (min-width: 1024px) {
+
+	.accordion {
+		font-size: 1.8rem;
+		width:50%;
+		text-align: center;
+	}
+
+	#appetizers:checked ~ label[for="appetizers"] + .menu-content {
+		height:170px;
+	}
+	#entrees:checked ~ label[for="entrees"] + .menu-content {
+		height:310px;
+	}
+	#desserts:checked ~ label[for="desserts"] + .menu-content {
+		height:145px;
+	}
+	#soups-salads:checked ~ label[for="soups-salads"] + .menu-content {
+		height:240px;
+	}
+}
 
 
 
