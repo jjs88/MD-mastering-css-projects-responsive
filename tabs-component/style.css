@@ -1,0 +1,84 @@
+body {
+	background-color: #c54576;
+	width:100%;
+}
+
+
+.tabComponent {
+	position: relative;
+	margin:0 auto;
+	text-align: center;
+	width:100%;
+	font-family: 'Roboto', serif;
+	font-size: 2em;
+	color: white;
+	width:42%;
+	transition: 2 ease-in;
+}
+
+/*remove radio button */
+input[type='radio'] {
+	display: none;
+}
+
+
+/*style the labels*/
+.tabComponent > [id^="tab-label"] {
+	display: inline-block;
+	background-color: #45C594;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	padding: 5px;
+	margin: 5px 1px 1px 0;
+}
+
+/*highlight tab*/
+.tabComponent > [id^="tab-label"]:hover {
+	background-color: #b4e7d4;
+	transform: rotate(2deg);
+}
+
+/*hide content for each label*/
+.content {
+	display: none;
+	position: absolute;
+	/*top:40px;*/
+	/*left:0px;*/
+	font-size: .8em;
+	-webkit-transition: all 1s ease;
+	transform:rotate(360deg);
+}
+
+
+/*highlight label green that is checked*/
+:checked + label[for="home-decor"],
+:checked + label[for="furniture"],
+:checked + label[for="kitchen"],
+:checked + label[for="clearance"]
+{
+	background-color: #7cd6b4;
+}
+
+
+/*get the input that is checked, get the next sibling, which is the label, and then get the content that comes after to display*/
+#home-decor:checked ~ label[for="home-decor"] + .content,
+#furniture:checked ~ label[for="furniture"] + .content,
+#kitchen:checked ~ label[for="kitchen"] + .content,
+#clearance:checked ~ label[for="clearance"] + .content 
+{
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
